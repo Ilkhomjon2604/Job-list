@@ -1,3 +1,28 @@
+:root{
+  --font-type: "Spartan", "Arial", sans-serif;
+  --shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+
+
+}
+
+/* spartan-500 - latin */
+@font-face {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""),
+  url("../fonts/spartan-v7-latin-500.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/spartan-v7-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* spartan-700 - latin */
+@font-face {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+  url("../fonts/spartan-v7-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/spartan-v7-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -17,11 +42,12 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #222;
+  font-family:var(--font-type);
+  font-size: 15px;
+  line-height: 24px;
+  background-color: #f2f2f2;
+  color: #7C8F8F;
+  ;
 }
 
 img {
@@ -33,7 +59,7 @@ img {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1210px;
   padding-left: 50px;
   padding-right: 50px;
   margin-left: auto;
@@ -44,4 +70,140 @@ img {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+}
+
+/* Frequent used class */
+.logo{
+  margin-right: 24px;
+}
+.skill{
+  padding: 4px 8px;
+  color:#5CA5A5;
+  background-color: #5ca5a53f;
+  letter-spacing: -0.1px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 16px;
+  border-radius:4px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.skill:hover{
+  background-color: #5CA5A5;
+  color:#fff;
+
+}
+
+.skill:active{
+  opacity: 0.6;
+}
+.job-title{
+  font-weight: bold;
+  font-size: 18px;
+  color: #2B3939;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.job-title:hover{
+  color: #5CA5A5;
+}
+.job-title:active{
+  opacity: 0.7;
+}
+.details{
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.115385px;
+  color: #7C8F8F;
+}
+.company-name{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5CA5A5;
+
+  margin-right: 24px;
+}
+
+.highlight{
+  padding: 5px 8px;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: -0.0846154px;
+  text-transform: uppercase;
+  color:#fff;
+  background-color: #5CA5A5;
+  border-radius: 12px;
+  margin-right: 8px;
+}
+
+.f{
+  background-color: #2B3939;
+}
+
+/* header */
+.header{
+  max-width:1366px;
+  width: 100%;
+  height: 156px;
+  margin: 0 auto;
+  margin-bottom: 76px;
+  background-image: url(../img/header-bg.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ /* header ko'rinmayapti  */
+
+
+/* Job wrapper  */
+.job-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 40px;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  border-radius:5px;
+  margin-bottom: 24px;
+}
+.job-details {
+  display: flex;
+  align-items: center;
+}
+.company-logo {
+  margin-right: 24px;
+  box-shadow: inset 0px 0px 35px rgba(0, 0, 0, 0.0452633);
+  border-radius:50%
+}
+.more-details {
+}
+.about-company {
+  display: flex;
+  align-items: center;
+}
+
+.about-date{
+  display: flex;
+  align-items: center;
+}
+
+.dot{
+  height: 4px;
+  width: 4px;
+  border-radius:50%;
+  background-color: #B7C4C4;
+  margin: 0 16px;
+}
+
+.required-skills {
+  display: flex;
+  flex-wrap: wrap;
 }
